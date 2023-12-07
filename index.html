@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h3>
+            <span class="first-three">First Three Words</span> <span class="rest-words">of Heading</span>
+        </h3>
+        <h1>STORIES</h1>
+
+        <div class="carousel">
+            <img src="1.png" alt="Image 1">
+            <img src="2.PNG" alt="Image 2">
+            <img src="3.PNG" alt="Image 3">
+            <img src="5.PNG" alt="Image 5">
+            <img src="4.PNG" alt="Image 4">
+        </div>
+        <div class="para">
+                <h2>para</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem odit ex exercitationem unde fugiat eos
+                sit voluptatibus maiores sequi molestiae pariatur rerum sapiente, quo possimus corrupti saepe quam sed
+                ullam voluptate distinctio reprehenderit. Assumenda, in?</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.carousel img');
+            let currentImageIndex = 1;
+
+            setInterval(function () {
+                images[0].src = images[currentImageIndex].src;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
